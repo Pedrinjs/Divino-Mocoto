@@ -1,0 +1,33 @@
+---
+export interface Props {
+	name: string,
+	href: string,
+}
+
+const { href, name } = Astro.props as Props;
+---
+
+<li>
+	<a href={href}>
+		<h4>{name}</h4>
+	</a>
+</li>
+
+<style lang="scss">
+	li {
+		float: left;
+        padding: 0 1pc;
+
+        a {
+            color: rgb(240, 224, 208);
+            text-decoration: none;
+            font-size: 1.25em;
+            transition: ease-out .3s;
+
+            &:hover {
+                text-decoration: underline rgb(0, 255, 255);
+                font-size: 1.35em;
+            }
+        }
+	}
+</style>

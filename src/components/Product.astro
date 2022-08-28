@@ -1,0 +1,38 @@
+---
+export interface Props {
+    name: string,
+    price: string,
+    src: string,
+}
+
+const {name, price, src} = Astro.props as Props;
+---
+
+<div class="products">
+        <h2>{name}</h2>
+        <h3>R${price}</h3>
+    <img src={src} alt="Imagem da Comida">
+    <hr>
+</div>
+
+<style lang="scss">
+    .products {
+        position: relative;
+        background-color: rgb(226, 226, 226);
+        padding-bottom: 5pc;
+        border-bottom: 3px solid rgb(0, 0, 0);
+
+        h2 + h3 {
+            position: absolute;
+            left: 1pc;
+        }
+        
+        img {
+            position: absolute;
+            width: 4.5pc;
+            height: 4.5pc;
+            right: .5pc;
+            bottom: .5pc;
+        }
+    }
+</style>

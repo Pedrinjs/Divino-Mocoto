@@ -1,0 +1,56 @@
+<footer>
+    <div class="important">
+        <p>© Copyright 2022 - Divino Mocotó</p>
+        <p>
+            Horário de funcionamento:
+            <br>
+            Domingos e Feriados —&gt 9:30 - 15:00;
+        </p>
+    </div>
+    <div class="contact">
+        <div>
+            <h5>
+                <b>Contato:</b>
+            </h5>
+            <p>Email: 
+                <a href="mailto:divinomocotoofc@gmail.com" target="_blank">divinomocotoofc@gmail.com</a>
+            </p>
+        </div>
+    </div>
+    <div class="social">
+        <a href="https://wa.me/559891257652" target="_blank" id="whatsapp">
+            <i class="fab">&#xf232;</i>
+        </a>
+        <br>
+        <a href="http://instagram.com/_u/divinomocotoofc/" target="_blank" id="instagram">
+            <i class="fab">&#xf16d;</i>
+        </a>
+    </div>
+</footer>
+
+<style lang="scss">
+    @mixin flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    footer,
+    .contact {
+        @include flex;
+    }
+
+    #whatsapp {
+        color: rgb(0 255 17);
+        font-size: 3em;
+    }
+
+    #instagram {
+        background: linear-gradient(45deg, rgb(5 10 230), rgb(88 81 216), rgb(131 58 180),
+        rgb(193 53 132), rgb(225 48 108), rgb(253 36 76), rgb(88 81 216),
+        rgb(247 119 55), rgb(252 175 69), rgb(255 220 128));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 3rem;
+    }
+</style>

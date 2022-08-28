@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+import NavLink from '../components/NavLink.astro';
+import Product from '../components/Product.astro';
+import Footer from '../components/Footer.astro';
+
+const weekDay: number = new Date().getDay();
+---
+
+<Layout title="Divino Mocotó">
+	<div class="container">
+		<img
+			src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Fcdn.darede.net%2Ffotos%2F2014%2F08%2Fdobradinha-com-mocot%25C3%25B3-11.jpg&f=1&nofb=1"
+			alt="mocotó" class="mocoto"
+		>
+	
+		<img src="/favicon.ico" alt="logo" class="logo">
+	
+		<>
+			{weekDay === 0 ? <h1 style="color: #00ff00;" class="open">Aberto agora</h1> : <h1 style="color: #ff0000;" class="open">Fechado agora</h1>}
+		</>
+	</div>
+
+	<nav>
+		<ul>
+			<NavLink href="/" name="Mocotó" />
+		</ul>
+	</nav>
+	
+	<h1>Divino Mocotó</h1>
+
+	<main class="products">
+		<Product name="Mocotó Pequeno" price="20,00" src="/favicon.ico"/>
+		<Product name="Mocotó Médio" price="25,00" src="/favicon.ico"/>
+		<Product name="Mocotó Grande" price="30,00" src="/favicon.ico"/>
+	</main>
+
+	<Footer />
+</Layout>
+
+<style lang="scss">
+	    .container {
+ 	    	position: relative;
+    		text-align: center;
+        	color: #F0E0D0;
+			
+			img.mocoto {
+				width: 100%;
+				height: 25pc;
+			}
+
+			img.logo {
+				width: 9pc;
+				height: 9pc;
+				position: absolute;
+				top: 45%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+
+			.open {
+				position: absolute;
+				bottom: -1pc;
+				left: 50%;
+				transform: translate(-50%, 0);
+	
+				h1 {
+					text-shadow: 4px 3px 3px black;
+					font-size: 2.5em;
+				}
+			}
+		}
+
+		nav {
+			overflow: hidden;
+        	background-color: #555;
+			opacity: 0.99;
+			position: sticky;
+			top: 0;
+			-webkit-backdrop-filter: blur(3px);
+			backdrop-filter: blur(3px);
+
+        	ul {
+	            float: left;
+            	display: block;
+        	    text-align: center;
+    	        list-style: none;
+	            margin: 0;
+			}
+		}
+
+		.products {
+			display: flex;
+			flex-direction: column;
+		}
+</style>
