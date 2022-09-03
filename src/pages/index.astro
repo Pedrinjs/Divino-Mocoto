@@ -5,6 +5,7 @@ import Product from '../components/Product.astro';
 import Footer from '../components/Footer.astro';
 
 const weekDay: number = new Date().getDay();
+const hour: number = new Date().getHours();
 ---
 
 <Layout title="Divino Mocotó">
@@ -17,7 +18,7 @@ const weekDay: number = new Date().getDay();
 		<img src="/favicon.ico" alt="logo" class="logo">
 	
 		<>
-			{weekDay === 0 ? <h1 style="color: #00ff00;" class="open">Aberto agora</h1> : <h1 style="color: #ff0000;" class="open">Fechado agora</h1>}
+			{weekDay === 0 && (hour >= 9 || hour < 15) ? <h1 style="color: #00ff00;" class="open">Aberto agora</h1> : <h1 style="color: #ff0000;" class="open">Fechado agora</h1>}
 		</>
 	</div>
 
