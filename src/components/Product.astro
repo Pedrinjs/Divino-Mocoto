@@ -10,31 +10,28 @@ const {name, price, src, description} = Astro.props as Props;
 ---
 
 <div class="products">
+    <div class="coisas">
         <h2>{name}</h2>
+        <hr>
         <h3>R${price}</h3>
+        <p>{description}</p>
+    </div>
     <img src={src} alt="Imagem da Comida">
-    <hr>
-    <p>{description}</p>
 </div>
 
 <style lang="scss">
     .products {
-        position: relative;
         background-color: rgb(226, 226, 226);
         padding-bottom: 5pc;
-        border-bottom: 3px solid rgb(0, 0, 0);
-
-        h2 + h3 {
-            position: absolute;
-            left: 1pc;
-        }
         
+        .coisas {
+            width: 75%;
+            float: left;
+        }
+
         img {
-            position: absolute;
-            width: 4.5pc;
-            height: 4.5pc;
-            right: .5pc;
-            bottom: .5pc;
+            width: 25%;
+            float: right;
         }
     }
 </style>
