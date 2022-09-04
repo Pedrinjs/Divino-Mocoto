@@ -9,7 +9,7 @@ export interface Props {
 const {name, price, src, description} = Astro.props as Props;
 ---
 
-<div class="products">
+<div class="product">
         <h2>{name}</h2>
         <h3>R${price}</h3>
     <img src={src} alt="Imagem da Comida">
@@ -18,7 +18,7 @@ const {name, price, src, description} = Astro.props as Props;
 </div>
 
 <style lang="scss">
-    .products {
+    .product {
         position: relative;
         background-color: rgb(226, 226, 226);
         padding-bottom: 5pc;
