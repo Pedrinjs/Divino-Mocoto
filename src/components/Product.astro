@@ -2,37 +2,34 @@
 export interface Props {
     name: string,
     price: string,
+    desc: string,
     src: string,
-    description: string,
 }
 
-const {name, price, src, description} = Astro.props as Props;
+const {name, price, desc, src} = Astro.props as Props;
 ---
 
-<div class="products">
-    <div class="coisas">
-        <h2>{name}</h2>
-        <hr>
-        <h3>R${price}</h3>
-        <p>{description}</p>
-    </div>
-    <img src={src} alt="Imagem da Comida">
-</div>
+<tr>
+    <td class="name">{name}</td>
+    <td class="price">{price}</td>
+    <td class="description">{desc}</td>
+    <td class="image">{src}</td>
+</tr>
 
 <style lang="scss">
-    .products {
-        background-color: rgb(226, 226, 226);
-        padding-bottom: 5pc;
-        
-        .coisas {
-            width: 75%;
-            float: left;
-        }
-
-        img {
-            width: 25%;
-            height: 25%;
-            float: right;
-        }
+    td.name {
+        font-size: 1.25rem;
+    }
+    
+    td.price {
+        font-size: 1.25rem;
+    }
+    
+    td.desc {
+        font-size: 1.25rem;
+    }
+    
+    td.src {
+        font-size: 1.25rem;
     }
 </style>

@@ -32,21 +32,22 @@ const hour: number = new Date().getHours();
 	<h1>Divino Mocotó</h1>
 
 	<main class="products">
-		<div id="mocoto">
-			<Product name="Marmitinha" price="23,00" src="blob:https://web.whatsapp.com/1fad49f8-df4e-40e3-ab39-84ec2afa4284" description="Lorem Ipsum Dolor Sit Amenit"/>
-			<Product name="Mocotó Pequeno" price="40,00" src="blob:https://web.whatsapp.com/1e56a837-2b9b-43c7-b525-a6c5cde4b43e" description="Lorem Ipsum Dolor Sit Amenit"/>
-			<Product name="Mocotó Médio" price="50,00" src="blob:https://web.whatsapp.com/7931ccc8-ba00-4f23-b482-22740ba1cdee" description="Lorem Ipsum Dolor Sit Amenit"/>
-			<Product name="Mocotó Completo" price="64,00" src="blob:https://web.whatsapp.com/266c0d6b-02fd-42d4-b78b-d7a4243b9b68" description="Lorem Ipsum Dolor Sit Amenit"/>
-			<Product name="Mocotó Família" price="99,99" src="blob:https://web.whatsapp.com/3b74ea26-1525-4e26-98b0-619caf1547f0" description="Lorem Ipsum Dolor Sit Amenit"/>
-		</div>
-		<div id="porcoes">
-			<Product name="Porção só Mocotó de 500g" price="45,00" src="blob:https://web.whatsapp.com/7f61d07a-c675-421c-b2e1-9d8f4cb9831d" description="Lorem Ipsum Dolor Sit Amenit"/>
-			<Product name="Porção só Mocotó de 700g" price="55,00" src="blob:https://web.whatsapp.com/7f61d07a-c675-421c-b2e1-9d8f4cb9831d" description="Lorem Ipsum Dolor Sit Amenit"/>
-		</div>
-		<div id="bebidas">
-			<Product name="Guaraná Jesus lata de 350ml" price="5,00" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.CGeMzSadn3OmnKgs--fnxQHaHa%26pid%3DApi&f=1" description="Lorem Ipsum Dolor Sit Amenit"/>
-			<Product name="Coca-Cola lata de 350ml" price="5,00" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.lhfgqxlNwevykTJLCnSqhAHaHa%26pid%3DApi&f=1" description="Lorem Ipsum Dolor Sit Amenit"/>
-		</div>
+		<table>
+			<tr>
+				<th>Nome</th>
+				<th>Preço</th>
+				<th>Descrição</th>
+			</tr>
+			<Product name="Marmitinha" price="23,00" src="blob:https://web.whatsapp.com/1fad49f8-df4e-40e3-ab39-84ec2afa4284" desc="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Mocotó Pequeno" price="40,00" src="blob:https://web.whatsapp.com/1e56a837-2b9b-43c7-b525-a6c5cde4b43e" desc="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Mocotó Médio" price="50,00" src="blob:https://web.whatsapp.com/7931ccc8-ba00-4f23-b482-22740ba1cdee" desc="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Mocotó Completo" price="64,00" src="blob:https://web.whatsapp.com/266c0d6b-02fd-42d4-b78b-d7a4243b9b68" desc="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Mocotó Família" price="99,99" src="blob:https://web.whatsapp.com/3b74ea26-1525-4e26-98b0-619caf1547f0" desc="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Porção só Mocotó de 500g" price="45,00" src="blob:https://web.whatsapp.com/7f61d07a-c675-421c-b2e1-9d8f4cb9831d" desc="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Porção só Mocotó de 700g" price="55,00" src="blob:https://web.whatsapp.com/7f61d07a-c675-421c-b2e1-9d8f4cb9831d" desc="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Guaraná Jesus lata de 350ml" price="5,00" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.CGeMzSadn3OmnKgs--fnxQHaHa%26pid%3DApi&f=1" desc="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Coca-Cola lata de 350ml" price="5,00" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.lhfgqxlNwevykTJLCnSqhAHaHa%26pid%3DApi&f=1" desc="Lorem Ipsum Dolor Sit Amenit"/>
+		</table>
 	</main>
 
 	<Footer />
@@ -105,7 +106,6 @@ const hour: number = new Date().getHours();
 		}
 
 		.products {
-			display: flex;
-			flex-direction: column;
+			
 		}
 </style>
