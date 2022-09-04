@@ -3,9 +3,10 @@ export interface Props {
     name: string,
     price: string,
     src: string,
+    description: string,
 }
 
-const {name, price, src} = Astro.props as Props;
+const {name, price, src, description} = Astro.props as Props;
 ---
 
 <div class="products">
@@ -13,6 +14,7 @@ const {name, price, src} = Astro.props as Props;
         <h3>R${price}</h3>
     <img src={src} alt="Imagem da Comida">
     <hr>
+    <p>{description}</p>
 </div>
 
 <style lang="scss">

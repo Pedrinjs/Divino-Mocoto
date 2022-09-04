@@ -15,25 +15,38 @@ const hour: number = new Date().getHours();
 			alt="mocotó" class="mocoto"
 		>
 	
-		<img src="/favicon.ico" alt="logo" class="logo">
+		<img src="public/logo.jpg" alt="logo" class="logo">
 	
 		<>
-			{weekDay === 0 && (hour >= 9 || hour < 15) ? <h1 style="color: #00ff00;" class="open">Aberto agora</h1> : <h1 style="color: #ff0000;" class="open">Fechado agora</h1>}
+			{weekDay === 0 && (hour >= 9 && hour < 15) ? <h1 style="color: #00ff00;" class="open">Aberto agora</h1> : <h1 style="color: #ff0000;" class="open">Fechado agora</h1>}
 		</>
 	</div>
 
 	<nav>
 		<ul>
 			<NavLink href="/" name="Mocotó" />
+			<NavLink href="/" name="Porções"/>
 		</ul>
 	</nav>
 	
 	<h1>Divino Mocotó</h1>
 
 	<main class="products">
-		<Product name="Mocotó Pequeno" price="20,00" src="/favicon.ico"/>
-		<Product name="Mocotó Médio" price="25,00" src="/favicon.ico"/>
-		<Product name="Mocotó Grande" price="30,00" src="/favicon.ico"/>
+		<div id="mocoto">
+			<Product name="Marmitinha" price="23,00" src="blob:https://web.whatsapp.com/1fad49f8-df4e-40e3-ab39-84ec2afa4284" description="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Mocotó Pequeno" price="40,00" src="blob:https://web.whatsapp.com/1e56a837-2b9b-43c7-b525-a6c5cde4b43e" description="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Mocotó Médio" price="50,00" src="blob:https://web.whatsapp.com/7931ccc8-ba00-4f23-b482-22740ba1cdee" description="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Mocotó Completo" price="64,00" src="blob:https://web.whatsapp.com/266c0d6b-02fd-42d4-b78b-d7a4243b9b68" description="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Mocotó Família" price="99,99" src="blob:https://web.whatsapp.com/3b74ea26-1525-4e26-98b0-619caf1547f0" description="Lorem Ipsum Dolor Sit Amenit"/>
+		</div>
+		<div id="porcoes">
+			<Product name="Porção só Mocotó de 500g" price="45,00" src="blob:https://web.whatsapp.com/7f61d07a-c675-421c-b2e1-9d8f4cb9831d" description="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Porção só Mocotó de 700g" price="55,00" src="blob:https://web.whatsapp.com/7f61d07a-c675-421c-b2e1-9d8f4cb9831d" description="Lorem Ipsum Dolor Sit Amenit"/>
+		</div>
+		<div id="bebidas">
+			<Product name="Guaraná Jesus lata de 350ml" price="5,00" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.CGeMzSadn3OmnKgs--fnxQHaHa%26pid%3DApi&f=1" description="Lorem Ipsum Dolor Sit Amenit"/>
+			<Product name="Coca-Cola lata de 350ml" price="5,00" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.lhfgqxlNwevykTJLCnSqhAHaHa%26pid%3DApi&f=1" description="Lorem Ipsum Dolor Sit Amenit"/>
+		</div>
 	</main>
 
 	<Footer />
@@ -74,6 +87,7 @@ const hour: number = new Date().getHours();
 
 		nav {
 			overflow: hidden;
+			z-index: 10;
         	background-color: #555;
 			opacity: 0.99;
 			position: sticky;
